@@ -43,12 +43,11 @@ public class Numbers {
                     }
                 }
             }else if (command.equals("Collapse")){
-                int number = Integer.parseInt(splitedInput[1]);
-
-                for (int i = 0; i < numbers.size(); i++) {
-                    if (numbers.get(i) < number) {
-                        numbers.remove(numbers.get(i));
-                    }
+                 int number = Integer.parseInt(splitedInput[1]);
+                    for (int i = numbers.size() - 1; i >= 0 ; i--) {
+                        if (numbers.get(i) < number){
+                            numbers.remove(i);
+                        }
                 }
             }
 
